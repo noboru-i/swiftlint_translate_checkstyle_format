@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'swiftlint_translate_checkstyle_format'
+require 'swiftlint_translate_checkstyle_format/cli'
+
+SwiftlintTranslateCheckstyleFormat::CLI.start
