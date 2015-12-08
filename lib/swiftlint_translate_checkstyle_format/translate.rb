@@ -19,7 +19,7 @@ module SwiftlintTranslateCheckstyleFormat
 
       json.each do |result|
         file = checkstyle.add_element('file',
-                                      'name' => SwiftlintTranslateCheckstyleFormat::Translate.create_path(result['file'], json)
+                                      'name' => result['file']
                                      )
         file.add_element('error',
                          'line' => result['line'],
@@ -29,10 +29,6 @@ module SwiftlintTranslateCheckstyleFormat
       end
 
       doc
-    end
-
-    def self.create_path(fila_path, json)
-      fila_path.gsub(Dir.pwd, '')
     end
 
     def self.add_dummy(checkstyle)
