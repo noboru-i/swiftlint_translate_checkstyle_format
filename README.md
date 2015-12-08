@@ -1,8 +1,11 @@
 # SwiftlintTranslateCheckstyleFormat
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/swiftlint_translate_checkstyle_format`. To experiment with that code, run `bin/console` for an interactive prompt.
+[![Gem Version](https://badge.fury.io/rb/swiftlint_translate_checkstyle_format.svg)](http://badge.fury.io/rb/swiftlint_translate_checkstyle_format)
+[![Build Status](https://travis-ci.org/noboru-i/swiftlint_translate_checkstyle_format.svg?branch=master)](https://travis-ci.org/noboru-i/swiftlint_translate_checkstyle_format)
+[![Code Climate](https://codeclimate.com/github/noboru-i/swiftlint_translate_checkstyle_format/badges/gpa.svg)](https://codeclimate.com/github/noboru-i/swiftlint_translate_checkstyle_format)
+[![Coverage Status](https://coveralls.io/repos/noboru-i/swiftlint_translate_checkstyle_format/badge.svg)](https://coveralls.io/r/noboru-i/swiftlint_translate_checkstyle_format)
 
-TODO: Delete this and the text above, and describe your gem
+Translate SwiftLint json format into checkstyle format.
 
 ## Installation
 
@@ -22,7 +25,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+First, you install [realm/SwiftLint](https://github.com/realm/SwiftLint).
+And execute it with `reporter: json` in `.swiftlint.xml`.
+
+### Use pipe
+
+```
+cat swiftlint.result.json | swiftlint_translate_checkstyle_format translate
+```
+
+### Use command-line option
+
+```
+swiftlint_translate_checkstyle_format translate --file="swiftlint.result.json"
+```
 
 ## Development
 
@@ -38,4 +54,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
